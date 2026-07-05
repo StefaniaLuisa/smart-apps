@@ -103,7 +103,7 @@ async function main() {
 
   switch (cmd) {
     case "projects":
-      out(await get(auth, "projects", { "filter[archived]": "false" }));
+      out(await get(auth, "projects", { "filter[status]": "1" }));
       break;
     case "tasks": {
       const params = { "filter[project_id]": req("--project"), "filter[status]": "1" };
