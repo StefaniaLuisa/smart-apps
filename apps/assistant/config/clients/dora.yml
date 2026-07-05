@@ -1,0 +1,19 @@
+name: "Declaration on Research Assessment"
+slug: dora
+
+productive:
+  project_ids: [79209]
+
+slack_channels: ["#r-dora", "C0332A907EC"]
+email_domains: ["sfdora.org"]
+fathom_matchers: ["DORA", "SF DORA", "Declaration on Research Assessment", "Giovanna"]
+drive_folder: ""
+
+goals:
+  - Keep the site healthy on a small, tight budget with hours prioritized carefully.
+  - "Run the ongoing SEO program: Yoast Premium, image alt-text coverage, and broken-link cleanup."
+  - Finish the recent site improvements (navigation redesign and landing page).
+  - Resolve the WP Engine storage constraint by reducing space usage rather than expanding.
+  - Manage requirements carefully with Giovanna, confirming scope and direction in writing to avoid rework.
+
+notes: "Small international NGO improving how research is evaluated (site sfdora.org, ~550 pages). Long-standing light-touch retainer, heavy on SEO and maintenance; Bryan Casler leads day-to-day, Stef's involvement is lighter. Stack: WordPress on WP Engine (storage constrained), Mailchimp (DORA master list), Yoast Premium plus image alt-text service, broken-link monitoring. Cadence: light-touch, coordinated via Slack and Productive with a weekly status report (task 6725066), no fixed client check-in. Gmail label Label_2362425371334209117 for hosting/forwarded alerts; hosting alerts route to hosting+dora@4sitestudios.com. General inboxes info@sfdora.org and administrator@sfdora.org."

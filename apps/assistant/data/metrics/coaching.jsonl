@@ -1,0 +1,8 @@
+{"date":"2026-06-25","metric":"talk_pct","value":64,"meeting":"2026-06-25-example-client-review","example":true}
+{"date":"2026-07-02","metric":"talk_pct","value":58,"meeting":"2026-07-02-example-client-checkin","example":true}
+{"date":"2026-07-02","metric":"questions_asked","value":7,"meeting":"2026-07-02-example-client-checkin","example":true}
+{"date":"2026-07-02","metric":"jargon_flags","value":3,"meeting":"2026-07-02-example-client-checkin","example":true}
+{"date":"2026-07-02","metric":"score_listening","value":3,"meeting":"2026-07-02-example-client-checkin","example":true}
+{"date":"2026-07-02","metric":"score_clarity","value":4,"meeting":"2026-07-02-example-client-checkin","example":true}
+{"date":"2026-07-02","metric":"score_engagement","value":4,"meeting":"2026-07-02-example-client-checkin","example":true}
+{"date":"2026-07-02","metric":"score_level_match","value":3,"meeting":"2026-07-02-example-client-checkin","example":true}

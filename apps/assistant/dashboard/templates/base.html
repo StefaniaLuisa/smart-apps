@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{title}} · Stef's Assistant</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <span class="brand">Stef's Assistant</span>
+  <nav>{{nav}}</nav>
+</header>
+<main class="viz-root">
+{{content}}
+</main>
+<footer class="foot">Generated {{generated}} · private — never publish</footer>
+<div id="tip" class="tip" hidden></div>
+<script>
+(function () {
+  var tip = document.getElementById('tip');
+  document.addEventListener('mousemove', function (e) {
+    var el = e.target.closest('[data-tip]');
+    if (!el) { tip.hidden = true; return; }
+    tip.textContent = el.getAttribute('data-tip');
+    tip.hidden = false;
+    var x = e.clientX + 12, y = e.clientY + 12;
+    var r = tip.getBoundingClientRect();
+    if (x + r.width > window.innerWidth - 8) x = e.clientX - r.width - 12;
+    if (y + r.height > window.innerHeight - 8) y = e.clientY - r.height - 12;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  });
+})();
+</script>
+</body>
+</html>

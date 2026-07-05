@@ -1,0 +1,19 @@
+name: "Future of Privacy Forum"
+slug: fpf
+
+productive:
+  project_ids: [95766]
+
+slack_channels: ["#r-fpf", "CUZRTV9AQ"]
+email_domains: ["fpf.org"]
+fathom_matchers: ["FPF", "Future of Privacy Forum", "Megan", "Adrienne", "Joana", "Christal Shrader-Sandi", "Rob van Eijk"]
+drive_folder: ""
+
+goals:
+  - Hold and maintain through Q2, protecting remaining hours for genuine break-fix and opening no new scopes without written budget approval.
+  - Get a clean Q3 go or no-go, picking one or two of the parked scopes that fit inside the 39-hour Q3 bank.
+  - Fix the measurement story by proposing lightweight, privacy-respecting measurement that fits their values before pitching optimization.
+  - Offer a contained MailChimp deliverability tune-up when budget allows as a high-value, low-hours win.
+  - "Plan a candid 2027 renewal: right-size to a true maintenance retainer or rebuild a real project pipeline at a supporting budget."
+
+notes: "Washington DC nonprofit privacy think tank (membership/thought-leadership model, includes Privacy Executives Network; affiliated properties ITPI, Center for AI, absorbed Student Privacy Compass). Philosophically resistant to tracking/analytics on its own site — the biggest constraint. 4Site has held the retainer since 2020; after a 2026 budget cut it is mostly maintenance and break-fix. Stack: WordPress with custom Gutenberg blocks, Cloudflare CDN, Matomo (privacy-first, poorly configured; client refuses GA4), OneTrust consent, SearchWP site search, MailChimp (recurring deliverability issues), no fundraising/advocacy CRM. Cadence: monthly check-in (sometimes cancelled to preserve hours), Sebrinia posts agenda in #r-fpf plus a weekly status report (task 2341201). Retainer Jan 1-Dec 31 2026, 171 hours at $220/hr, ~14-15 hrs/month; term ends Dec 31 2026. Heming Nelson signs contracts and gets MailChimp admin alerts. Full handoff in wynn-onboarding-fpf.md."

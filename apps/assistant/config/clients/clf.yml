@@ -1,0 +1,22 @@
+name: "Conservation Law Foundation"
+slug: clf
+
+productive:
+  project_ids: [825645, 860868]
+
+slack_channels: ["#r-clf", "C0A65GVSH3J", "#p-clf-homepage-redesign", "C0BC5A6KALQ"]
+email_domains: ["clf.org"]
+fathom_matchers: ["CLF", "Conservation Law Foundation", "Chelsea Feinstein", "Carol Gregory", "Laurie O'Reilly", "Dani Dong"]
+drive_folder: ""
+
+goals:
+  - Double the donor base over five years through digital acquisition and fundraising, with this year as a pilot to set year 2-5 targets.
+  - Be a proactive strategic partner that makes recommendations and provides reliable technical support, not just a task-taker.
+  - Provide SEO strategic leadership and direction, since CLF has nobody in-house focused on SEO.
+  - Fix the conversion pathway with internal linking, clearer CTAs, and conversion rate optimization so blog traffic converts.
+  - Modernize the website as a growth tool via the homepage, navigation, and footer redesign.
+  - Strengthen fundraising forms by redesigning the outdated, over-long donation experience (ENgrid form redesign).
+  - Improve the email program by redesigning the eNews newsletter, building Marketing Tools templates, and acting on the deliverability audit.
+  - Consolidate competing Looker Studio dashboards into one trusted reporting source.
+
+notes: "New England environmental advocacy nonprofit (lawyer-heavy culture, prefers literal/precise copy). Stack: WordPress/Gutenberg on WPEngine, Engaging Networks (donations/advocacy/email/SMS), Raisers Edge sync, Stripe, Tatango SMS, TidyContact, Yoast Pro, GA4 + Looker Studio, VWO; ~30k email list. Cadence: biweekly Wednesdays 9:30 AM CT. Gmail label CLF (Label_2738673554886152529). Hosting on WPEngine, login alias hosting+clf@4sitestudios.com; Stef monitors CLF email via stef+clf@4sitestudios.com. Fiscal year resets August 1, driving budget/spend timing. Flagship project is the homepage/nav/footer redesign (kickoff July 1 2026, launch target Oct 21). Living Agenda Google Doc is source of truth; weekly report task 15338784."

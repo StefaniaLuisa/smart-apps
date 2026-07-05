@@ -1,0 +1,13 @@
+{
+  "name": "stefs-personal-assistant",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node dashboard/build.mjs",
+    "validate": "node scripts/validate-data.mjs"
+  },
+  "dependencies": {
+    "marked": "^12.0.0",
+    "yaml": "^2.4.0"
+  }
+}

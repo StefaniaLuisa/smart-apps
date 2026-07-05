@@ -1,0 +1,18 @@
+name: "The Gambrell Foundation"
+slug: gambrell
+
+productive:
+  project_ids: [553765, 836182]
+
+slack_channels: ["#r-gambrell", "C09E0VC9X4M", "#p-gambrell-thelibrary", "C0A5BBBUN3F"]
+email_domains: ["gambrellfoundation.org"]
+fathom_matchers: ["Gambrell", "The Gambrell Foundation", "Melissa Nemec"]
+drive_folder: ""
+
+goals:
+  - Ship The Library, the 4Site-owned website build, through its design and content review rounds.
+  - Keep the retainer maintenance, support, and digital strategy work moving.
+  - Protect the existing digital setup — Mailchimp newsletter and Google Analytics integrations — through the HLoveCo-led main site redesign.
+  - Complete the BIMI audit and implementation once the foundation resolves its trademark and brand sign-off.
+
+notes: "Family foundation near Charlotte NC; no donor/advocacy CRM. Stack: DNS at Cloudflare, email on Microsoft 365, Mailchimp newsletter, Google Analytics, with SPF/DKIM/DMARC at enforcement (DMARC reports to ethicallytech.com) and additional senders SendGrid, Mailchimp, and a ClickDimensions stream (cpmails.com). Cadence: monthly ~30-minute check-in, scheduled month to month by Sebrinia. No Gmail label yet (mail lands under IMPORTANT only; worth a from:@gambrellfoundation.org filter). Melissa Nemec (Program Director) is effectively the sole day-to-day contact. Outside agency HLoveCo leads the main redesign; watch item: President Brian Collier is departing, which could affect the relationship and Melissa's standing. Two Productive projects: 553765 (Retainer) and 836182 (The Library, formerly Reading Room)."

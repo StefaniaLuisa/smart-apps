@@ -1,0 +1,15 @@
+# Copy to <slug>.yml — one file per client. The matcher fields let jobs
+# classify Slack channels, emails, meetings, and Productive projects to this client.
+name: "Acme Corporation"
+slug: acme                        # lowercase kebab-case; used in paths and hours_by_client
+
+productive:
+  project_ids: []                 # e.g. [123456] — from the Productive project URL
+
+slack_channels: []                # e.g. ["#acme-website", "C01ABCDEF"]
+email_domains: []                 # e.g. ["acme.com"]
+fathom_matchers: []               # strings matched (case-insensitive) against meeting titles and attendee names/domains, e.g. ["acme", "jane doe"]
+drive_folder: ""                  # Drive folder URL for this client's docs
+
+goals: []                         # the client's goals, in their words — drives recommendations
+notes: ""                         # anything else useful

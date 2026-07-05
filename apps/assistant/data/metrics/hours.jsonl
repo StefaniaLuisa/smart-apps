@@ -1,0 +1,5 @@
+{"date":"2026-07-01","metric":"hours_worked","value":6.8,"example":true}
+{"date":"2026-07-02","metric":"hours_worked","value":8.1,"example":true}
+{"date":"2026-07-03","metric":"hours_worked","value":7.4,"example":true}
+{"date":"2026-07-03","metric":"hours_client","client":"example-client","value":3.1,"example":true}
+{"date":"2026-07-03","metric":"hours_client","client":"internal","value":4.3,"example":true}
