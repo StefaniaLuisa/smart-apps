@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.local
+apps/assistant/dashboard/dist/
+apps/assistant/dist/
+.DS_Store
+*.log

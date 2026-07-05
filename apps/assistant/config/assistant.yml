@@ -1,0 +1,27 @@
+# Stef's Personal Assistant — global config
+owner:
+  name: Stef
+  email: stef@4sitestudios.com
+
+timezone: America/Chicago         # CONFIRM: used for all cadences and date math
+
+work_hours:
+  start: "09:00"
+  end: "17:00"
+
+slack:
+  # Where the assistant sends check-ins, EOD prompts, and summaries.
+  # Fill with your Slack handle or member ID (e.g. "@stef" or "U01ABCDEF").
+  dm_target: "@stef"
+
+cadences:                          # local times, weekdays unless noted
+  checkin: ["10:30", "13:30", "15:30"]
+  eod_prompt: "16:45"
+  digest_meetings: "21:00"        # daily
+  plan_week: "MON 08:00"
+
+transcripts:
+  retention_days: 90              # raw transcript.md purgeable after this; digests kept forever
+
+evaluation:
+  cycle: yearly                   # informational; /eval-packet accepts any period
