@@ -1,0 +1,20 @@
+name: "Food & Water Watch"
+slug: fww
+
+productive:
+  project_ids: [162996]
+
+slack_channels: ["#r-fww", "C035H7Z5M3K"]
+email_domains: ["fwwatch.org"]
+fathom_matchers: ["FWW", "Food & Water Watch", "FWA", "Food & Water Action", "Angie Aker", "Katy Kiefer"]
+drive_folder: ""
+
+goals:
+  - "Plan FY27 around flat hours (240 hrs at $220), make the hours go further, and keep the Tier 2/3 expansion case warm for the next renewal."
+  - Protect in-flight workstreams — multistep panel consolidation, subscription lightboxes, ENgrid template migration, and the Remember Me cookie — from being re-debated.
+  - "Follow FWW's FY27 priority order: (1) multistep panel consolidation, (2) Remember Me cookie, (3) regive and thank-you-page optimization."
+  - Make analytics governance the differentiator via a GA4/GTM refresh, consent-driven tracking audit, and donor-funnel dashboard.
+  - Move FWW toward self-service with promo plugin training and documentation.
+  - Clear the backlog by finally closing out the stalled Beyond Gas campaign.
+
+notes: "Stack is Engaging Networks + ENgrid, 4Site promo plugin, Stripe, GA4 + GTM with consent-driven tracking and A/B testing, Mobilize for events, and a cross-domain Remember Me cookie across foodandwaterwatch.org and foodandwateraction.org (FWA). Cadence: biweekly check-ins on the 1st and 3rd Tuesday at 1:30 PM CT, run through the PM, logged in a Living Agenda Google Doc. No Gmail label yet (worth a from:@fwwatch.org filter). Mass list is act@fwwatch.org. Retainer FY runs July 1 to June 30; FY27 renewal not yet signed as of July 2026 (30-day extension, 20-hour July bridge). Stef leads; Sebrinia Welch is PM; Wynn is onboarding to manage the retainer."

@@ -1,0 +1,20 @@
+name: "National Wildlife Federation"
+slug: nwf
+
+productive:
+  project_ids: [39172]
+
+slack_channels: ["#r-nwf", "CP444T4CB", "#p-nwf-cartabandoment", "C0ATH0460HJ", "#p-tidycontact-nwf", "C03CHEJAQVD"]
+email_domains: ["nwf.org"]
+fathom_matchers: ["NWF", "National Wildlife Federation", "Donna Davidovich", "Stephanie Waggy"]
+drive_folder: ""
+
+goals:
+  - Move consent from opt-out to opt-in so GA4 only fires after users accept, re-implementing GA4 with Consent Mode v2 despite the resulting drop in tracked sessions.
+  - Fix the Ranger Rick COPPA problem by replacing over-restrictive OneTrust/GA4 with cookieless Plausible analytics on the children's site.
+  - Build one coherent consent architecture across all four properties that supports cross-domain measurement, rather than site-by-site patches.
+  - Stand up clean, compliant analytics via the parallel GA4/GTM build, GTM PII/compliance work, an event tracking plan, and UTM governance.
+  - Recover donation revenue through cart-abandonment work on the giving flow.
+  - Be NWF's analytics and privacy partner, leading consent and measurement strategy rather than just executing tickets.
+
+notes: "Stack is GA4 + GTM with Consent Mode v2, OneTrust CMP, Plausible for Ranger Rick, WordPress across properties, and TidyContact (4Site's product); compliance drivers are GDPR, COPPA, and US privacy law. Properties: nwf.org, nwfactionfund.org, support.nwf.org, subs.rangerrick.org. New GA4 property G-32HD9CBBWX built in parallel, not yet in production. Cadence: monthly check-in on the 3rd Tuesday 10:30 AM CT, plus a weekly analytics update and ad-hoc consent/OneTrust working sessions. Retainer since 2019; Sebrinia Welch is PM. Live status in Productive task 17686999 (Analytics Weekly Update)."

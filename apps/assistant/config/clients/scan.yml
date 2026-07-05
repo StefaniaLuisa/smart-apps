@@ -1,0 +1,21 @@
+name: "Save the Children Action Network"
+slug: scan
+
+productive:
+  project_ids: [392168]
+
+slack_channels: ["#r-scan", "C05B93QLDGT"]
+email_domains: ["savechildren.org"]
+fathom_matchers: ["SCAN", "Save the Children Action Network", "Romain Coetmellec", "Melody College", "Stephan Caramma", "Jon Wheeler"]
+drive_folder: ""
+
+goals:
+  - Remain SCAN's strategic web and CRM partner, not a ticket shop.
+  - Ship the TidyContact-to-EveryAction (RaiseMore) email integration currently in QA.
+  - Stand up a reusable CRO program with a Testing Plan and PIE-style prioritization.
+  - Pursue the AI-search (AEO/GEO) content optimization opening.
+  - Fix the GTM purchase-event tracking broken by the June 2025 template migration.
+  - Pre-approve a Q3 work list while Romain is out so quarterly hours stay booked.
+  - Watch for Romain's potential role change affecting scope, approver, and budget.
+
+notes: "WordPress with a custom block library/design system on Pantheon; CRM is EveryAction (NGP VAN), NOT Engaging Networks; Yoast SEO, GA4 with GTM, NeverBounce/TidyContact validation, Figma design system plus Storybook. Cadence: biweekly check-in Wednesdays 1:30 PM ET, agenda posted in #r-scan a day ahead with a weekly budget/status report. Gmail labels Label_14 (Productive/Zoom) and Label_46 (direct correspondence). Retainer Jan 1-Dec 31 2026, 286 hours at $220/hr (~63/quarter, use-or-lose) plus 34 floater hours; urgent work $330/hr; all work and approvals flow through Productive. Romain Coetmellec is the single point of contact, out of office June 22-July 20 2026."

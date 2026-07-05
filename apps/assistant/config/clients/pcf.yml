@@ -1,0 +1,21 @@
+name: "Prostate Cancer Foundation"
+slug: pcf
+
+productive:
+  project_ids: [858208]
+
+slack_channels: ["#r-avalon-pcf", "C0AEXLB3HSA"]
+email_domains: ["pcf.org"]
+fathom_matchers: ["PCF", "Prostate Cancer Foundation", "Avalon", "Chris Rempert", "Andrea Thorn"]
+drive_folder: ""
+
+goals:
+  - "Ship the GiveWP migration before the ~July 15 Donorbox cutoff, activating the Elite license on live and prioritizing functional work (analytics, GiveWP) ahead of compliance."
+  - Stand up custom iframe tracking for GiveWP to capture purchase events and value across Meta, Google, Taboola, Fluent, and Microsoft Ads, since there is no native GA4/GTM hook.
+  - "Finish fixing the tracking: GTM purchase events, duplicate Facebook pixel and G-tag cleanup, and any Google Ads reconfiguration."
+  - Deliver the analytics, consent, privacy, and privacy-policy audits, consolidated into one task so PCF can manage the slow legal process at its own pace.
+  - Land Sydney's Donorbox audit and recommendations alongside the analytics recommendations.
+  - Unblock full access to PCF's accounts and the GiveWP Elite activation, the recurring blocker pausing work.
+  - Watch the budget carefully after urgent 1.5x work burned hours, sequencing deliberately and routing budget questions through Heather.
+
+notes: "Engagement is PCF served through Avalon Consulting (prime), 4Site subcontracted; Avalon is a Partner Agency labeling several nonprofits (PCF, DTFA, NTHP, NPCA). Kicked off March 5, 2026; PCF new to agency work. Stack: WordPress on Pantheon (managed by Bluebridge, not 4Site), Donorbox migrating to GiveWP on give.pcf.org, GA4 + GTM, Meta/Google/Taboola/Microsoft Ads, Fluent forms, migrating off MailCoach. Cadence: regular/biweekly check-ins with Chris Rempert (Avalon), Heather Schneider (PM) runs the Avalon - PCF Living Agenda Google Doc. Gmail label Label_2362425371334209117; hosting alerts route to hosting+pcf@4sitestudios.com. Live status in Productive weekly report task 15971117. MSA/SOW paperwork in Google Drive."

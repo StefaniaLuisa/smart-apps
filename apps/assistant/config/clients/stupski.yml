@@ -1,0 +1,20 @@
+name: "Stupski Foundation"
+slug: stupski
+
+productive:
+  project_ids: [26301]
+
+slack_channels: ["#r-stupski", "CHRP0DE6Q"]
+email_domains: ["stupski.org"]
+fathom_matchers: ["Stupski", "Stupski Foundation", "Claire Callahan", "Glen Galaich", "Raymi Faria", "Cindy Asrir", "Matthew Nagato"]
+drive_folder: ""
+
+goals:
+  - "Capitalize on Glen's elevated profile from the TIME100 Philanthropy honor and the CONTROL book (bio-page/promo treatments, CONTROL analytics), keeping graphics logo-free to avoid the $7K TIME100 license."
+  - Tell the spend-down story through site content, design audits, and impact graphics on giving above the 5% minimum.
+  - Keep the site healthy and findable via WordPress security updates, the grantee directory refresh, and Yoast SEO schema work.
+  - Sort out the Google Ads account performance, cross-referencing GA4 and GTM.
+  - Move Cheri's podcast forward on content and branding.
+  - Hold budget discipline and rebalance hours by discipline after the hot CONTROL launch, reserving for Q3 and Q4.
+
+notes: "WordPress with Yoast SEO (schema aggregation in progress); GA4 with GTM plus a Meta Pixel for CONTROL ad tracking; Google Ads under investigation; Salesforce and Candid on the data/grants side. Cadence: monthly check-in (Stef and Claire), plus a weekly Thursday CONTROL marketing/comms call through the book launch window. Gmail label Label_4367998754030901057. Retainer 288 hours plus 30 floater hours/year at $220/hr (~$69,960); the CONTROL launch drove heavy early-year spend, so watch actuals against the annual bank. Claire Callahan is the main day-to-day contact; Glen Galaich is CEO and author of CONTROL."

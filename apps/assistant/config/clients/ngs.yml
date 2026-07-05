@@ -1,0 +1,18 @@
+name: "National Geographic Society"
+slug: ngs
+
+productive:
+  project_ids: []                 # TBD — not yet in source files
+
+slack_channels: []                # TBD
+email_domains: ["ngs.org", "nationalgeographic.org"]
+fathom_matchers: ["NGS", "National Geographic Society"]
+drive_folder: ""
+
+goals:
+  - Stand up a clean GA4 purchase event for ENgrid donations capturing value, frequency, form name/template, and transaction ID (the priority).
+  - "Track four supporting ENgrid forms: eCard, embedded-eCard donation, email sign-up, and unsubscribe."
+  - Enable cross-domain tracking between the main site and the give. subdomain.
+  - Reconcile and retire the legacy EN donation tracking to avoid double-counting.
+
+notes: "Global nonprofit; 4Site's role is digital fundraising measurement, current focus GA4 + GTM tracking for new ENgrid donation forms on give.nationalgeographic.org. Stack: Engaging Networks + ENgrid (EN client ID 2184), GA4 property a69167359 with Measurement ID G-JRRKGYJRKE and web stream 2663800415, single GTM container GTM-5GDQ9F (internal 1656538, account 135297793) across www + give. + subdomains, Osano CMP for consent. Watch-outs: legacy EN donation layer must be reconciled, ENgrid pushes string dataLayer values uppercase, new GTM items use the ENgrid- prefix in folder 21-ENgrid. Productive ID, cadence, Slack channel, and client-side contacts are all still TBD in the source files. Stef leads the analytics work."

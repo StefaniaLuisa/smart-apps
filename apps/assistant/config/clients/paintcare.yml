@@ -1,0 +1,20 @@
+name: "PaintCare"
+slug: paintcare
+
+productive:
+  project_ids: [532598, 768649]
+
+slack_channels: ["#r-paintcare", "C07DRB5KN1F", "#p-paintcare-site-locator", "C09HZ6GT42D"]
+email_domains: ["paint.org"]
+fathom_matchers: ["PaintCare", "Chelsea", "B. Rodgers", "C. Tufarolo"]
+drive_folder: ""
+
+goals:
+  - Land the Site Locator redesign into closeout, handing off the analytics/reporting workflow and Looker Studio dashboard and running project-closeout steps.
+  - Improve search and AI visibility via a scheduled SEO/AI visibility audit with recommendations, since people search and increasingly ask AI to find paint drop-off sites.
+  - Ship the Upper Tier Menu navigation redesign in Figma.
+  - Keep the retainer productive with ongoing maintenance and feature work, surfacing developer ideas from Mike as capacity allows.
+  - Coordinate cleanly with The Martin Group, settling how 4Site and the outside agency work and communicate.
+  - "Plan against a tight quarterly bank of hours (roughly 5.5 left mid-June), sequencing Q3 deliberately."
+
+notes: "Stack is WordPress at paintcare.org, a custom Site Locator drop-off finder with a GA4 + Looker Studio reporting workflow Stef built, and Figma for design; SEO/AI visibility is an active focus. PaintCare is a paint-stewardship nonprofit established by the American Coatings Association; staff email is @paint.org. Cadence: biweekly check-in Tuesdays 9:30 AM CT run through Sebrinia Welch (PM) with a living agenda Google Doc. No Gmail label yet (worth creating one). Hosting alerts route to hosting+paintcare@4sitestudios.com. Michael Wilson is developer; Heather Schneider on accounts/oversight. Productive 532598 is the retainer; Site Locator project 768649 sits outside Stef's direct visibility."
