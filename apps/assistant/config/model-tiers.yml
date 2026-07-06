@@ -1,0 +1,35 @@
+# Model tiering for the assistant's skills / scheduled routines.
+#
+# Rationale: recurring routines dominate ongoing token cost (checkin runs
+# ~3x/day, eod + digest-meetings daily, plan-week weekly). Match each skill's
+# model to the judgment it actually needs — mechanical sweeps/extraction on
+# Haiku, structured synthesis on Sonnet, deep judgment on Opus. This is the
+# highest-leverage cost lever and costs nothing in quality when the cheap
+# skills are the mechanical ones.
+#
+# Applied when creating each Claude routine (the routine's session model) and
+# usable as guidance for interactive runs. Model IDs are current as of
+# 2026-07: haiku=claude-haiku-4-5 ($1/$5), sonnet=claude-sonnet-5 ($3/$15),
+# opus=claude-opus-4-8 ($5/$25) per 1M input/output tokens.
+
+default: claude-sonnet-5   # fallback if a skill isn't listed
+
+tiers:
+  haiku: claude-haiku-4-5
+  sonnet: claude-sonnet-5
+  opus: claude-opus-4-8
+
+# skill -> tier, with the reason it sits there.
+skills:
+  checkin:          { tier: haiku,  why: "Intraday sweep across Slack/Gmail/Calendar/Productive; triage + flag actionable. Pure scan, no synthesis." }
+  digest-meetings:  { tier: haiku,  why: "Transcript -> structured digest (action items, decisions). Extraction, not judgment." }
+  capture-feedback: { tier: haiku,  why: "Save a praise quote as a source-linked record. Mechanical." }
+  eod:              { tier: sonnet, why: "Gather day's signals + synthesize a daily log + 3 questions. Daily driver; bounded synthesis. Try haiku if quality holds." }
+  agenda:           { tier: sonnet, why: "Draft a client-ready meeting agenda from recap + outstanding items. Client-facing writing." }
+  brief:            { tier: sonnet, why: "Full client brief: assemble task/budget data + recommendations. Borderline opus; start on sonnet, escalate if recs feel thin." }
+  coach:            { tier: opus,   why: "Analyze meeting performance (talk-time, clarity, jargon) + write coaching feedback. Nuanced judgment." }
+  plan-week:        { tier: opus,   why: "Weekly planning: roll up last week, prioritize/re-estimate this week. Planning judgment." }
+  eval-packet:      { tier: opus,   why: "Compile an evaluation showcase (quantified wins, quotes, growth). High-stakes synthesis." }
+
+# Rough weekly cost sketch (26 runs: 15 checkin + 5 eod + 5 digest + 1 plan-week):
+#   all-opus  ~ $50/mo   |  this tiering ~ $12-15/mo   |  quality preserved on judgment skills.

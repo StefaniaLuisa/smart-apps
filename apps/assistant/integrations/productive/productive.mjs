@@ -77,6 +77,7 @@ const HELP = `Productive.io client — usage:
   node productive.mjs tasks --project <id>             open tasks in a project
        [--changed-since <ISO date>]                    only tasks updated since
   node productive.mjs my-tasks [--changed-since <ISO>] open tasks assigned to me
+       [--me <email> | --assignee <id>]                 (else PRODUCTIVE_OWNER_EMAIL)
   node productive.mjs task <id>                        one task, full detail
   node productive.mjs comments --task <id>             comments on a task (newest first)
   node productive.mjs budgets --project <id>           budgets for a project
@@ -113,8 +114,25 @@ async function main() {
       break;
     }
     case "my-tasks": {
-      const me = await get(auth, "organization_memberships", {}, { paginate: false });
-      const personId = me[0]?.person_id;
+      // Resolve "me" to a person id. Prefer an explicit --assignee; otherwise
+      // look up by owner email (--me <email> or PRODUCTIVE_OWNER_EMAIL), which
+      // the people endpoint supports. (organization_memberships has no reliable
+      // "current user" filter, so it can't identify the token's owner.)
+      let personId = arg("--assignee");
+      if (!personId) {
+        const email = arg("--me") ?? process.env.PRODUCTIVE_OWNER_EMAIL;
+        if (email) {
+          const people = await get(auth, "people", { "filter[email]": email }, { paginate: false });
+          personId = people[0]?.id;
+        }
+      }
+      if (!personId) {
+        out({
+          status: "error",
+          detail: "Could not resolve assignee. Pass --assignee <id> or --me <email>, or set PRODUCTIVE_OWNER_EMAIL in .env (see RUNBOOK.md §2).",
+        });
+        process.exit(1);
+      }
       const params = { "filter[assignee_id]": personId, "filter[status]": "1" };
       const since = arg("--changed-since");
       if (since) params["filter[updated_at][gt_eq]"] = since;
