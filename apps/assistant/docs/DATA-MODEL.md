@@ -205,6 +205,22 @@ sources: [{ label: "Slack thread", url: "…", kind: slack }]
 ---
 ```
 
+### `plan-day` — `data/planning/daily/YYYY-MM-DD.md`
+
+Written every morning by `/plan-day`. Same `moves` shape as `plan`, but scoped to today.
+
+```yaml
+---
+type: plan-day
+date: 2026-07-20
+moves:
+  - { action: move, task: "…", reason: "3h of meetings this afternoon", source: { … } }   # action: move | update | add | re-estimate
+focus: []                          # the 3 things that matter most today
+sources: []
+gaps: []
+---
+```
+
 ### `plan` — `data/planning/YYYY-Wnn.md`
 
 ```yaml

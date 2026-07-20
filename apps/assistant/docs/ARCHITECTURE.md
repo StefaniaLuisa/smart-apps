@@ -12,7 +12,7 @@
 | 4 | **Meeting performance coaching** — after each recorded client meeting: talk-time balance, engagement, clarity, jargon vs. client level; constructive feedback; longitudinal speaking trends | `/coach`, `metrics/coaching.jsonl`, dashboard Coaching view |
 | 5 | **Presentation/communication support** — translate technical jargon into succinct client-friendly language while prepping | jargon-translation pass inside `/agenda` and `/brief` |
 | 6 | **Meeting transcript pipeline** — automatically download, organize, digest Fathom transcripts | `/digest-meetings` (scheduled nightly) |
-| 7 | **Week/day planning engine** — recommendations on what to move, update, add, or re-estimate | `/plan-week` (scheduled Monday) |
+| 7 | **Week/day planning engine** — recommendations on what to move, update, add, or re-estimate | `/plan-day` (scheduled daily); `/week-review` (scheduled Monday retrospective) |
 | 8 | **Cowork/chat context** — awareness of what Claude sessions are doing on client projects | `data/context/inbox/` convention (see `integrations/cowork/CONTEXT.md`) |
 | 9 | **Positive-feedback capture** — praise from Slack/Gmail/meetings saved verbatim with links | `/capture-feedback` (also runs inside `/eod` and `/digest-meetings`) |
 
@@ -43,7 +43,7 @@ AI-agent powered. There is no server. Claude sessions — scheduled routines and
 
 ## 3. Components
 
-- **Skills** (`.claude/skills/*/SKILL.md`) — nine authoritative procedures; see table below. Skills are prompts, not code: they name the exact MCP tools to call and the exact schemas to write.
+- **Skills** (`.claude/skills/*/SKILL.md`) — ten authoritative procedures; see table below. Skills are prompts, not code: they name the exact MCP tools to call and the exact schemas to write.
 - **Data layer** (`data/`) — see `DATA-MODEL.md`. Everything source-linked; everything git-versioned.
 - **Config** (`config/`) — `assistant.yml` (owner, timezone, work hours, Slack DM target, cadences, retention) and one `clients/<slug>.yml` per client (matchers that let jobs classify a Slack channel, email, meeting, or Productive project to a client).
 - **Integrations** — MCP connectors for Slack/Gmail/Calendar/Drive/Fathom/Rize/GitHub; `integrations/productive/productive.mjs` REST CLI for Productive.io (token via env); `integrations/cowork/CONTEXT.md` convention for session context.
@@ -54,13 +54,14 @@ AI-agent powered. There is no server. Claude sessions — scheduled routines and
 
 | Job | Trigger | Inputs | Outputs |
 |---|---|---|---|
-| `/checkin` | routine 10:30 / 13:30 / 15:30 weekdays | Slack mentions+DMs since cursor, unanswered Gmail threads, Calendar next 3h, Productive task changes, Rize focus so far | Slack DM action list; `data/checkins/…`; cursor update |
+| `/checkin` | routine 08:30 / 10:30 / 13:30 / 15:30 weekdays | Slack mentions+DMs since cursor, unanswered Gmail threads, Calendar next 3h, Productive task changes, Rize focus so far | Slack DM action list; `data/checkins/…`; cursor update |
 | `/eod` | routine 16:45 weekdays sends the DM prompt; Stef replies there or runs `/eod` | Rize hours & allocation, today's Calendar, Slack/Gmail sent activity, Productive activity, today's check-ins, `context/inbox/` | `data/daily/…`; `metrics/hours.jsonl` + `workload.jsonl`; feedback files; Slack confirmation |
-| `/digest-meetings` | routine 21:00 daily | Fathom meetings since cursor → summaries + transcripts | `data/meetings/<date-slug>/{meeting,transcript}.md`; queues `/coach` for client meetings |
+| `/digest-meetings` | routine 16:00 daily | Fathom meetings since cursor → summaries + transcripts | `data/meetings/<date-slug>/{meeting,transcript}.md`; queues `/coach` for client meetings |
 | `/coach <meeting>` | chained from digest, or on demand | the meeting's transcript + trailing coaching metrics | `coaching.md`; `metrics/coaching.jsonl` |
-| `/brief <client>` | on demand + Monday 07:30 for clients with meetings that week | Productive (tasks, comments, budgets), Slack channels, Gmail, last meeting record, client profile | `data/clients/<slug>/briefs/<date>.md`; profile learnings updated |
+| `/brief <client>` | on demand | Productive (tasks, comments, budgets), Slack channels, Gmail, last meeting record, client profile | `data/clients/<slug>/briefs/<date>.md`; profile learnings updated |
 | `/agenda <client>` | on demand, usually after `/brief` | latest brief, last meeting's outstanding items, upcoming Calendar event | `data/clients/<slug>/agendas/<date>.md` (recap → outstanding → decisions → new topics), jargon-translated |
-| `/plan-week` | routine Monday 08:00 | prior week's dailies + check-ins, Productive due/overdue, Calendar week ahead, budgets, `context/inbox/` | `data/weekly/…` rollup; `data/planning/…` move/update/add/re-estimate recommendations; Slack DM summary |
+| `/plan-day` | routine daily 08:00 | Productive due/overdue + budgets, today+2d Calendar, recent open loops, `context/inbox/` | `data/planning/daily/<date>.md` move/update/add/re-estimate recommendations + today's focus; Slack DM |
+| `/week-review` | routine Monday 06:00 | prior week's dailies, meetings, Productive changes, Slack/Gmail praise, Fathom | `data/weekly/…` retrospective: delivered work, wins & feedback (linked), what got missed, what to watch; Slack DM |
 | `/capture-feedback` | sub-procedure of `/eod` & `/digest-meetings`; also standalone | a praise signal (Slack message, email, transcript quote) | `data/feedback/…` with verbatim quote + source |
 | `/eval-packet [period]` | on demand | `data/**` only — no live calls | `data/evaluation/<period>.md` showcase: quantified wins, hours, feedback quotes, coaching growth, headwinds |
 

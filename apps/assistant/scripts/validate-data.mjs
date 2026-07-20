@@ -22,6 +22,7 @@ const REQUIRED = {
   agenda: ["client", "date", "brief_ref", "sources"],
   feedback: ["date", "from", "client", "channel_kind", "quote", "sources"],
   plan: ["week", "moves", "sources"],
+  "plan-day": ["date", "moves", "sources"],
   evaluation: ["period", "generated", "totals", "sources"],
   context: ["date", "client"],
 };

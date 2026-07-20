@@ -25,7 +25,8 @@ Day-to-day you don't run code — you talk to Claude:
 - `/agenda <client>` — draft the next client meeting agenda
 - `/coach <meeting>` — speaking/performance feedback from a Fathom recording
 - `/digest-meetings` — pull + digest new Fathom meetings
-- `/plan-week` — weekly rollup + planning recommendations
+- `/plan-day` — daily: what to move, update, add, or re-estimate today
+- `/week-review` — Monday retrospective: delivered work, wins, misses, what to watch
 - `/eval-packet [period]` — compile your evaluation showcase
 
 See the [Runbook](apps/assistant/docs/RUNBOOK.md) for one-time setup (Productive.io token, scheduled routines).
