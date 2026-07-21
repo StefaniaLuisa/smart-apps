@@ -47,11 +47,15 @@ In the Claude Code **environment settings** for this project:
 
 - **Environment variables** (so client briefs pull real tasks and budgets):
   - `PRODUCTIVE_API_TOKEN` — from Productive → Settings → API integrations → Generate token
-  - `PRODUCTIVE_ORG_ID` — shown next to the token (also in your Productive URL)
+  - `PRODUCTIVE_ORG_ID` — shown next to the token (Stef's org is `2650`)
+  - `PRODUCTIVE_OWNER_EMAIL` — `stef@4sitestudios.com` (lets `my-tasks` resolve "me")
 - **Connectors authorized on the environment:** Slack, Gmail, Google Calendar,
   Google Drive, Fathom, Rize, GitHub.
-- **Network access:** must **allow outbound HTTPS** (the app calls `api.productive.io`,
-  GitHub, and npm). A "no egress" policy will block Productive and pushes.
+- **Network egress — add this host to the allowlist:** `api.productive.io`.
+  The environment blocks outbound calls by default; without this host allowed, every
+  Productive call fails with `403 — Host not in allowlist: api.productive.io` (the token
+  is fine, the network just isn't). GitHub and npm are already reachable. If the policy
+  offers "allow all outbound HTTPS" instead of a per-host allowlist, that works too.
 - **Setup script (optional):** `cd apps/assistant && npm install` — so the dashboard's
   two dependencies are ready in any fresh session.
 

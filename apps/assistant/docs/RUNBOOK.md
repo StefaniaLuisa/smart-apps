@@ -15,9 +15,10 @@ Productive.io has no Claude connector, so the assistant uses a small REST client
 1. In Productive: **Settings → API integrations → Generate new token** (read-only if offered).
 2. Note your **organization ID** (shown alongside the token, also visible in the Productive URL).
 3. Provide both to the assistant either way:
-   - **Claude environment variables** (preferred for scheduled runs): set `PRODUCTIVE_API_TOKEN` and `PRODUCTIVE_ORG_ID` in your Claude Code environment settings.
+   - **Claude environment variables** (preferred for scheduled runs): set `PRODUCTIVE_API_TOKEN`, `PRODUCTIVE_ORG_ID`, and `PRODUCTIVE_OWNER_EMAIL` in your Claude Code environment settings.
    - **Local `.env`**: copy `integrations/productive/.env.example` to `.env` in the same folder (gitignored) and fill it in.
-4. Test: `node integrations/productive/productive.mjs projects` → should list your projects. Without a token it prints `{"status":"not_configured", …}` and exits 0 — skills treat that as a `gap`, never a failure.
+4. **Allowlist the Productive host in the environment's network egress:** `api.productive.io`. The environment blocks outbound calls by default; without this, every Productive call returns `403 — Host not in allowlist: api.productive.io` even with a valid token.
+5. Test: `node integrations/productive/productive.mjs projects` → should list your projects. Without a token it prints `{"status":"not_configured", …}` and exits 0 — skills treat that as a `gap`, never a failure. A `403 … not in allowlist` means step 4 isn't done yet.
 5. Add each client's Productive project ids to their `config/clients/<slug>.yml`.
 
 ## 3. Scheduled routines
